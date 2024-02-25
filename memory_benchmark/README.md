@@ -21,7 +21,7 @@ program options:
 
 
 ### Build in debug mode
-`make SGX_DEBUG=1 SGX_MODE=hW`
+`make SGX_DEBUG=1 SGX_MODE=SW`
 `sgx-gdb bencgmark_sgx`
 
 

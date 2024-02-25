@@ -1,0 +1,15 @@
+/* Enclave.edl - Top EDL file. */
+
+enclave {
+	include "../include/hot_calls.h"
+  include "../include/common.h"
+    trusted {      
+      public void custom_ecall([user_check] uint64_t* result);
+      public void preallocate_ecall([user_check] uint64_t* number_nodes , [user_check] int* rnd);
+      public void empty_ecall();
+    };
+    untrusted {
+      void ocall_print_string([in, string] const char *str);
+    };
+
+};
